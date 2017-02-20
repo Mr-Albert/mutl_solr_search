@@ -8,5 +8,8 @@ Project statement :
          Note2: viewing and column order should be from temples files which we can save in DB in the future.
          Note3: try to find a good JQuery grid  or any alternative tool.
 
+
+No merging to other person's branch,only owner should merge,pull request only.
+
 author-Mina
  
