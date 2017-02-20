@@ -1,1 +1,0 @@
-mutl_solr_search
