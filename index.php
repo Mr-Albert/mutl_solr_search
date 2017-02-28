@@ -1,7 +1,9 @@
 <?php 
 
-
-
+//firefox needed the next three lines to allow respones,nice wasted day!!!.
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: PUT, GET, POST");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
 class ColumnHelper
 {
@@ -135,13 +137,19 @@ if(isset($_GET["pq_curpage"]) && isset($_GET["pq_rpp"]) || isset($_GET["pq_filte
      */
     
     
-    
+    /*
     
 
     $sb = "current Page:" . $pq_curPage . "RP:" . $pq_rPP . "query:".$filterQuery."Param : ".$filterParam;
     echo $sb;
     echo '<script>';
     echo 'var name = ' . json_encode($name) . ';';
-    echo '</script>';
-}    
+    echo '</script>';*/
+    
+    
+   echo"sucess : "+$filterQuery;
+}  
+
+echo"fail";
+
 ?>
