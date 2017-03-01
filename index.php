@@ -117,7 +117,6 @@ class FilterHelper
 
 
 
-
 if(isset($_GET["pq_curpage"]) && isset($_GET["pq_rpp"]) || isset($_GET["pq_filter"]) )
 {
     $pq_curPage = $_GET["pq_curpage"];
@@ -127,7 +126,7 @@ if(isset($_GET["pq_curpage"]) && isset($_GET["pq_rpp"]) || isset($_GET["pq_filte
     $filterQuery = $dsf->query;
     $filterParam = $dsf->param;
 
-    
+  //  echo "i am in";
     /* filtering logic here */
     
     /* paging logic
@@ -145,11 +144,16 @@ if(isset($_GET["pq_curpage"]) && isset($_GET["pq_rpp"]) || isset($_GET["pq_filte
     echo '<script>';
     echo 'var name = ' . json_encode($name) . ';';
     echo '</script>';*/
-    
-    
-   echo"sucess : "+$filterQuery;
-}  
 
-echo"fail";
+    $data = json_decode(file_get_contents("convertcsv.json"), true);
+    //print_r($shipments);
+    
+    echo "{\"data\":". json_encode( $data ) ." }" ;
+    
+   
+}  
+//echo "url " . $_GET['q'];
+
+//echo"fail";
 
 ?>

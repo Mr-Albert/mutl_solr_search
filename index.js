@@ -97,11 +97,12 @@ $(function () {
             
             dataType: "JSON",
             method: "GET",
-            url: "/index.php",
+            url: "http://localhost/hey/index.php",
             
             
             getData: function (dataJSON) {
                 var data = dataJSON.data;
+                alert("inside data");
                 return { curPage: dataJSON.curPage, totalRecords: dataJSON.totalRecords, data: data };
             }
         };
@@ -195,7 +196,7 @@ function ajaxFunction(){
 	   // Now get the value from user and pass it to
 	   // server script.
 	   
-	   ajaxRequest.open("GET", "http://localhost/hey/index.php?q=" + "ss", true);
+	   ajaxRequest.open("GET", "http://localhost/hey/index.php?q=query" , true);
 	   ajaxRequest.send(null); 
 	}
 	
